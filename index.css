@@ -17,6 +17,15 @@ body {
   overflow-wrap: break-word; /* force long words to break */
 }
 
+div {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+select {
+  font-size: 17px;
+}
+
 #left {
   grid-area: left;
 }
@@ -66,6 +75,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
+  padding: 15px 15px 15px 15px ;
 }
 
 #doc-title {
@@ -83,8 +93,10 @@ body {
 
 #code {
   border: 2px solid #f55e41;
+  padding: 15px 15px 15px 15px ;
   border-radius: 4px;
   white-space: pre-wrap; /* force long lines to break */
+  font-size: 20px;
 }
 
 footer {
@@ -92,4 +104,5 @@ footer {
   padding: 20px;
   background-color: #efefef;
   text-align: center;
+  font-size: 20px;
 }
