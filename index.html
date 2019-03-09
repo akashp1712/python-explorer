@@ -61,11 +61,9 @@
             <div id='rm'>I need to remove:
               <select id='sel-rm'>
                 <option>...</option>
-                <option value='start'>element(s) from the start of the array</option>
-                <option value="end">element(s) from the end of an array</option>
-                <option value="delete_at">element(s) at a specific location</option>
+                <option value='pop'>element at the given index</option>
+                <option value="remove">the element from the list</option>
                 <option value="delete">all occurences of a specific element</option>
-                <option value="compact">nil elements</option>
                 <option value="uniq">duplicate elements</option>
               </select>
             </div>
@@ -74,13 +72,12 @@
               <select id='sel-find'>
                 <option>...</option>
                 <option value='specific'>an element at a specific position</option>
-                <option value="match">elements that match a condition I create</option>
+                <option value="match">TODO: lambda :: elements that match a condition I create</option>
                 <option value='include'>whether a certain element exists</option>
-                <option value="bsearch">an element that matches a condition in a sorted array</option>
               </select>
             </div>
 
-            <div id='iter'>I need to iterate by:
+            <div id='iter'>TODO: I need to iterate by:
               <select id='sel-iter'>
                 <option>...</option>
                 <option value='each'>executing a function I will create for each element</option>
@@ -91,16 +88,17 @@
             <div id='sort'>I need to:
               <select id='sel-sort'>
                 <option>...</option>
-                <option value='reverse'>reverse the array</option>
-                <option value="sort">sort the array's elements</option>
+                <option value='reverse'>reverse the list</option>
+                <option value="sort">sort the list's elements</option>
               </select>
             </div>
 
             <div id='other'>I need to:
               <select id='sel-other'>
                 <option>...</option>
-                <option value='length'>find an array's length</option>
-                <option value="empty">check whether an array is empty</option>
+                <option value='length'>find the length of a list</option>
+                <option value="clear">empties the given list</option>
+                <option value="count">find the the number of occurrences of an element in a list.</option>
               </select>
             </div>
           </div>

@@ -26,49 +26,37 @@ var explorerDataEn = {
     }
   },
   'rm': {
-    'end': {
+    'pop': {
       'name': 'pop',
       'link_name': 'pop',
-      'desc': 'Removes the last n elements from the array and returns it. Returns nil if the array is empty',
-      'text': "nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.pop #=> 6<br>nums #=> [4, 5]<br><br>nums.pop(2) #=> [4, 5]<br>nums #=> []<br><br>nums.pop #=> nil<br>nums #=> []"
+      'desc': 'Removes and returns the element at the given index.',
+      'text': 'nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.pop(0) # 2<br>nums # [3, 4, 5]<br><br>nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.pop(2) # 4<br>nums # [2, 3, 5]'
     },
-    'start': {
-      'name': 'shift',
-      'link_name': 'shift',
-      'desc': 'Adds the last n elements to the array and returns it. Returns nil if the array is empty',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.shift #=> 4<br>nums #=> [5, 6]<br><br>nums.shift(2) #=> [5, 6]<br>nums #=> []<br><br>nums.shift #=> nil<br>nums #=> []'
-    },
-    'delete_at': {
-      'name': 'delete_at',
-      'link_name': 'delete_at',
-      'desc': 'Deletes the element at the given index and returns that element. Returns nil if the index is out of range',
-      'text': "nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.delete_at(1) #=> 5<br>nums #=> [4, 6]<br><br>nums.delete_at(99) #=> nil"
+    'remove': {
+      'name': 'remove',
+      'link_name': 'remove',
+      'desc': 'Searches for the first instance of the given element and removes it (throws ValueError if not present)',
+      'text': 'nums = [2, 2, 3, 4, 5, 5] # [2, 2, 3, 4, 5, 5]<br>nums.remove(2) <br>nums # [2, 3, 4, 5, 5]<br><br>nums.remove(4) <br>nums # [2, 3, 5, 5]'
     },
     'delete': {
       'name': 'delete',
       'link_name': 'delete',
-      'desc': 'Delete all items from the array that are equal to the given element. Returns the last deleted item or nil if no matching item is found',
-      'text': "nums = [4, 5, 5, 6] #=> [4, 5, 5, 6]<br>nums.delete(2) #=> nil<br>nums #=> [4, 5, 5, 6]<br><br>nums.delete(5) #=> 5<br>nums #=> [4, 6]"
-    },
-    'compact': {
-      'name': 'compact',
-      'link_name': 'compact',
-      'desc': 'Returns a copy of the original array with all nil elements removed.',
-      'text': "items = [nil, 4, nil, 6, nil, nil] #=> [nil, 4, nil, 6, nil, nil]<br>items.compact #=> [4, 6]<br>items #=> [nil, 4, nil, 6, nil, nil]"
+      'desc': 'Delete all items from the list that are equal to the given element.',
+      'text': 'nums = [2, 2, 3, 4, 5, 5] # [2, 2, 3, 4, 5, 5]<br> # Using list comprehension <br>nums = [val for val in nums if val != 2]<br>nums # [3, 4, 5, 5]<br>'
     },
     'uniq': {
       'name': 'uniq',
       'link_name': 'uniq',
-      'desc': 'Returns a copy of the original array with all duplicate elements removed.',
-      'text': "nums = [5, 4, 5, 1, 7, 5, 1] #=> [5, 4, 5, 6, 7, 5, 1]<br>nums.uniq #=> [4, 7]<br>nums #=> [5, 4, 5, 6, 7, 5, 1]"
+      'desc': 'Returns a copy of the original list with all duplicate elements removed.',
+      'text': "nums = [5, 4, 5, 1, 7, 5, 1] # [5, 4, 5, 1, 7, 5, 1]<br> # convert the list to set<br>nums = set(num) # (1, 4, 5, 7)<br> # convert it back to list<br>nums = list(nums) # [1, 4, 5, 7]"
     }
   },
   'find': {
     'specific': {
-      'name': '[]',
-      'link_name': '5B-5D',
+      'name': 'specific',
+      'link_name': 'specific',
       'desc': 'Returns the element at the specified index(es)',
-      'text': "nums = [1, 2, [3, 3.5]] #=> [1, 2, [3, 3.5]]<br>nums[0]#=> 1<br>nums[2, 1] #=> 3.5"
+      'text': "nums = [12, 13, [14, 15]] # [12, 13, [14, 15]]<br>nums[0] # 12<br>nums[2][1] # 15"
     },
     'match': {
       'name': 'select',
@@ -79,14 +67,8 @@ var explorerDataEn = {
     'include': {
       'name': 'include',
       'link_name': 'include-3F',
-      'desc': 'Returns true if the given object is in the array. otherwise, returns false',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.include?(3) #=> false<br>nums.include?(4) #=> true'
-    },
-    'bsearch': {
-      'name': 'bsearch',
-      'link_name': 'bsearch',
-      'desc': 'Uses binary search to find a value in a sorted array that meets a given condition. Returns nil if not found',
-      'text': "nums = [0, 4, 7, 10, 12]<br>nums.bsearch {|x| x >= 4 } #=> 4<br>nums.bsearch {|x| x >= 6 } #=> 7<br>nums.bsearch {|x| x >= -1 } #=> 0<br>nums.bsearch {|x| x >= 100 } #=> nil<br>nums.bsearch{|x| x == 7 } => 7<br>nums.bsearch {|x| x == 6 } #=> nil"
+      'desc': 'Returns true if the given object is in the List. otherwise, returns false',
+      'text': 'nums = [1, 4, 5, 7, [3, 8]] # [1, 4, 5, 7, [3, 8]]<br>4 in nums # True<br>3 in nums # False'
     }
   },
   'iter': {
@@ -107,14 +89,14 @@ var explorerDataEn = {
     'reverse': {
       'name': 'reverse',
       'link_name': 'reverse',
-      'desc': "Returns a new array containing the original array's elements in reverse order. <br><br><code>reverse</code> does not modify the original array. <code>reverse!</code> modifies the original array",
-      'text': "nums = [5, 4, 6] #=> [5, 4, 6]<br>nums.reverse #=> [6, 4, 5]<br>nums #=> [5, 4, 6]<br><br>nums.reverse! #=> [6, 4, 5]<br>nums #=> [6, 4, 5]"
+      'desc': "The reverse() function doesn't take any argument. The reverse() function doesn't return any value. It only reverses the elements and updates the list.",
+      'text': "nums = [5, 4, 6] # [5, 4, 6]<br>nums.reverse()<br>nums # [6, 4, 5]"
     },
     'sort': {
       'name': 'sort',
       'link_name': 'sort',
-      'desc': 'Returns a new array created by sorting the original array.<br><code>sort</code> does not modify the original array. <code>sort!</code> modifies the original array',
-      'text': "nums = [5, 4, 6] #=> [5, 4, 6]<br>nums.sort #=> [4, 5, 6]<br><br>nums #=> [5, 4, 6]<br>nums.sort! #=> [4, 5, 6]<br>nums #=> [4, 5, 6]<br>"
+      'desc': "sort() method doesn't return any value. Rather, it changes the original list.",
+      'text': "nums = [5, 4, 6] # [5, 4, 6]<br>nums.sort()<br>nums # [4, 5, 6]<br>"
     }
   },
   'other': {
@@ -122,13 +104,19 @@ var explorerDataEn = {
       'name': 'length',
       'link_name': 'length',
       'desc': 'Returns the length of an array. Length may be 0.',
-      'text': "nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.length #=> 3"
+      'text': "nums = [4, 5, 6] # [4, 5, 6]<br>len(nums) # 3"
     },
-    'empty': {
-      'name': 'empty',
-      'link_name': 'empty-3F',
-      'desc': 'Returns true if the array has no elements. otherwise, returns false',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.empty? #=> false<br><br>nums = [] #=> []<br>nums.empty? #=> true'
+    'clear': {
+      'name': 'clear',
+      'link_name': 'clear',
+      'desc': 'clear the give list',
+      'text': 'nums = [4, 5, 6] # [4, 5, 6]<br>nums.clear()<br>nums # []<br>'
+    },
+    'count': {
+      'name': 'count',
+      'link_name': 'count',
+      'desc': 'The count() method returns the number of occurrences of an element in a list.',
+      'text': 'nums = [2, 2, 5, 4, 5, 5] # [2, 2, 3, 4, 5, 5]<br>nums.count(2) # 2<br>nums.count(5) # 3'
     }
   }
 };
