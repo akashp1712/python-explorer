@@ -58,31 +58,11 @@ var explorerDataEn = {
       'desc': 'Returns the element at the specified index(es)',
       'text': "nums = [12, 13, [14, 15]] # [12, 13, [14, 15]]<br>nums[0] # 12<br>nums[2][1] # 15"
     },
-    'match': {
-      'name': 'select',
-      'link_name': 'select',
-      'desc': 'Returns a new array containing all elements of the original array for which the given block returns a true value',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.select { |num| num.even? } #=> [4, 6]'
-    },
     'include': {
       'name': 'include',
       'link_name': 'include-3F',
       'desc': 'Returns true if the given object is in the List. otherwise, returns false',
       'text': 'nums = [1, 4, 5, 7, [3, 8]] # [1, 4, 5, 7, [3, 8]]<br>4 in nums # True<br>3 in nums # False'
-    }
-  },
-  'iter': {
-    'each': {
-      'name': 'each',
-      'link_name': 'each',
-      'desc': 'calls the given block once for each element in the array. Returns the original array',
-      'text': "nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.each{|x| print x+1} #=> [4, 5, 6]<br>#the command above prints '567' and returns [4, 5, 6]"
-    },
-    'map': {
-      'name': 'map',
-      'link_name': 'map',
-      'desc': 'calls the given block once for each element in the array. Returns the original array, whose values have been replaced by the values returned by the block',
-      'text': 'nums = [4, 5, 6] #=> [4, 5, 6]<br>nums.each{|x| x+10} #=> [14, 15, 16]'
     }
   },
   'sort': {
