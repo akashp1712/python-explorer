@@ -135,7 +135,7 @@ var explorerDataEn = {
         'link_name': 'count',
         'option_text': 'find the the number of occurrences of an element in a list.',
         'desc': 'The count() method returns the number of occurrences of an element in a list.',
-        'text': 'nums = [2, 2, 5, 4, 5, 5] # [2, 2, 3, 4, 5, 5]<br>nums.count(2) # 2<br>nums.count(5) # 3'
+        'text': 'nums = [2, 2, 5, 4, 5, 5] # [2, 2, 5, 4, 5, 5]<br>nums.count(2) # 2<br>nums.count(5) # 3'
       }
     }
   }
