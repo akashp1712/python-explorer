@@ -93,7 +93,7 @@ select {
 
 #code {
   border: 2px solid #f55e41;
-  padding: 15px 15px 15px 15px ;
+  padding: 20px 15px 20px 15px ;
   border-radius: 4px;
   white-space: pre-wrap; /* force long lines to break */
   font-size: 18px;
