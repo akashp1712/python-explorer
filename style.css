@@ -75,7 +75,8 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
-  padding: 15px 15px 15px 15px ;
+  padding: 5px 10px 10px 15px ;
+  margin-top: 25px;
 }
 
 #doc-title {

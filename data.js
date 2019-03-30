@@ -22,7 +22,7 @@ var explorerDataEn = {
         'name': 'extend',
         'link_name': 'extend',
         'option_text': 'other list to this list',
-        'desc': 'Adds the elements in list2 to the end of the list. Using + or += on a list is similar to using extend().',
+        'desc': 'Adds the elements in list2 to the end of the list. Using + or += on a list is similar to using extend(). Does not return anything.',
         'text': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>more_nums = nums.extend([7, 8]) # [4, 5, 6, 7, 8]<br>"
       },
       'concat': {
@@ -126,8 +126,8 @@ var explorerDataEn = {
       'clear': {
         'name': 'clear',
         'link_name': 'clear',
-        'option_text': 'empties the given list',
-        'desc': 'clear the give list',
+        'option_text': "empties the given list, doesn't return any value",
+        'desc': 'The clear() method modifies and clears the given  list',
         'text': 'nums = [4, 5, 6] # [4, 5, 6]<br>nums.clear()<br>nums # []<br>'
       },
       'count': {
