@@ -67,7 +67,7 @@ $(document).ready(function(){
 
   function initHide() {
     hideSecondSelectorChildren();
-    hideDocumentation();
+    //hideDocumentation();
   }
 
   function hideDocumentation() {
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
   function resetFirstSelector(selectedVal) {
     hideSecondSelectorChildren();
-    hideDocumentation();
+    //hideDocumentation();
     $("#second-selector #" + selectedVal ).show();
     $("#code").html(" # Create a List<br>nums = [2, 3, 4, 5]");
     highlightCode();
@@ -118,9 +118,9 @@ $(document).ready(function(){
 
   function updateInfo(category, itemName) {
     updateCode(category, itemName);
-    //showDocumentation();
+    showDocumentation();
     highlightCode();
-    //updateDocumentation(category, itemName);
+    updateDocumentation(category, itemName);
   }
 
   function updateCode(category, itemName) {
@@ -134,6 +134,9 @@ $(document).ready(function(){
   function updateDocumentation(category, itemName) {
     var selectedItem = explorerData['en'][category]['data'][itemName];
     var elem = [];
+    elem[0] = "<h2 id='doc-title'>" + selectedItem['name'] + '</h2>';
+    elem[1] = '<div>' + selectedItem['desc'] + '</div>';
+
     var text = elem.join('');
 
     $('#documentation').html(text);
