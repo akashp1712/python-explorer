@@ -3,20 +3,26 @@ var explorerDataEn = {
     'option_text': 'add element or other list',
     'action_text': 'I need to add: ',
     'selector_id': 'sel-add',
+    'input': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.append(8) # [2, 3, 4, 5, 8]",
+    'result': "This is result",
+    'desc': 'Adds element to the end of a list. Does not return the new list, just modifies the original.',
+
     'data': {
       'end': {
         'name': 'append',
         'link_name': 'append',
         'option_text': 'element to the end of a list',
         'desc': 'Adds element to the end of a list. Does not return the new list, just modifies the original.',
-        'text': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.append(8) # [2, 3, 4, 5, 8]"
+        'input': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.append(8) # [2, 3, 4, 5, 8]",
+        'result': "This is result"
       },
       'insert': {
         'name': 'insert',
         'link_name': 'insert',
         'option_text': 'element at a specific location',
         'desc': 'Inserts the given element before the element with the given index. Does not return the new list, just modifies the original.',
-        'text': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.insert(2, 9)  # [2, 3, 9, 4, 5]<br>nums.insert(3, 'one') # [2, 3, 9, \"one\", 4, 5]"
+        'input': "nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.insert(2, 9)  # [2, 3, 9, 4, 5]<br>nums.insert(3, 'one') # [2, 3, 9, \"one\", 4, 5]",
+        'result': "This is result"
       },
       'extend': {
         'name': 'extend',
@@ -40,11 +46,27 @@ var explorerDataEn = {
     'selector_id': 'sel-rm',
     'data': {
       'pop': {
-        'name': 'pop',
-        'link_name': 'pop',
-        'option_text': 'element at the given index',
-        'desc': 'Removes and returns the element at the given index.',
-        'text': 'nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.pop(0) # 2<br>nums # [3, 4, 5]<br><br>nums = [2, 3, 4, 5] # [2, 3, 4, 5]<br>nums.pop(2) # 4<br>nums # [2, 3, 5]'
+
+        'option_text': 'remove elements',
+        'action_text': 'I need to remove: ',
+        'selector_id': 'sel-rm',
+        'data': {
+          'remove': {
+
+            'option_text': 'remove elements',
+            'action_text': 'I need to remove: ',
+            'selector_id': 'sel-rm',
+            'data': {
+              'remove': {
+                'name': 'remove',
+                'link_name': 'remove',
+                'option_text': 'the element from the list',
+                'desc': 'Searches for the first instance of the given element and removes it (throws ValueError if not present)',
+                'text': 'nums = [2, 2, 3, 4, 5, 5] # [2, 2, 3, 4, 5, 5]<br>nums.remove(2) <br>nums # [2, 3, 4, 5, 5]<br><br>nums.remove(4) <br>nums # [2, 3, 5, 5]'
+              }
+            }
+          }
+        }
       },
       'remove': {
         'name': 'remove',
