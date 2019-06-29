@@ -111,19 +111,37 @@ $(document).ready(function () {
         else {
             $('#inputdata').html("This is input data ")
         }
-        var typer = document.getElementById('inputdata');
-        typewriter = setupTypewriter(typer);
-        typewriter.type();
-
+        typewrite('inputdata');
 
         if (typeof finaldata.result != 'undefined') {
             $('#resultdata').html(finaldata.result)
         } else {
             $('#resultdata').html('This is result ')
         }
+        typewrite('resultdata');
+    }
 
-        var typer = document.getElementById('resultdata');
-        typewriter = setupTypewriter(typer);
-        typewriter.type();
+    function typewrite(idname) {
+
+        var str = $('#' + idname).html();
+        var i = 0,
+            isTag,
+            text;
+
+        (function type() {
+
+            text = str.slice(0, ++i);
+            if (text > str) return;
+
+            document.getElementById(idname).innerHTML = text;
+
+            var char = text.slice(-1);
+            if (char === '<') isTag = true;
+            if (char === '>') isTag = false;
+
+            if (isTag) return type();
+            setTimeout(type, 80);
+        }());
+
     }
 });
