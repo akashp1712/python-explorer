@@ -102,9 +102,9 @@ $(document).ready(function () {
 
     }
 
-
+    var stopfunction;
     function displaydata(finaldata) {
-
+        StopExection()
         if (typeof finaldata.input != 'undefined') {
             $('#inputdata').html(finaldata.input)
         }
@@ -131,17 +131,22 @@ $(document).ready(function () {
         (function type() {
 
             text = str.slice(0, ++i);
-            if (text > str) return;
-
             document.getElementById(idname).innerHTML = text;
+            if (text === str) return;
+
+
 
             var char = text.slice(-1);
             if (char === '<') isTag = true;
             if (char === '>') isTag = false;
 
             if (isTag) return type();
-            setTimeout(type, 80);
+            stopfunction = setTimeout(type, 20); //this valiable change speed of typing
         }());
 
+    }
+
+    function StopExection() {
+        clearTimeout(stopfunction);
     }
 });
